@@ -10,12 +10,14 @@ const DiscographyPreview = ({ name, albums }) => (
       {albums.map(album => (
         <div className='discography-item' key={album.id}>
           {album.title}
-          <img
-            className='image'
-            key={album.id}
-            src={album.image_url}
-            alt='image'
-          />
+          <div className='img-container'>
+            <img
+              className='image'
+              key={album.id}
+              src={album.image_url}
+              alt='image'
+            />
+          </div>
         </div>
       ))}
     </div>

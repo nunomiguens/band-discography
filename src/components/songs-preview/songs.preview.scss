@@ -1,0 +1,21 @@
+.songs-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  max-width: 1170px;
+  margin: 4rem auto;
+
+  img {
+    width: 40%;
+  }
+  p {
+    max-width: 35em;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    line-height: 1.8;
+  }
+}
