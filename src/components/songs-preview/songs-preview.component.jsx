@@ -5,17 +5,17 @@ import './songs.preview.scss';
 const SongsPreview = ({ albums }) => (
   <div className='songs-list'>
     {albums.map(album => (
-      <div className='songs-list'>
-        <img key={album.id} src={album.image_url} alt='image' />
+      <div className='songs-list' key={album.id}>
+        <img src={album.image_url} alt={album.title} />
         <div>
           <h2>{album.title}</h2>
-          <p>
+          <div>
             {album.songs.map((song, ind) => (
-              <div>
+              <div key={ind}>
                 {ind + 1} - {song.title}
               </div>
             ))}
-          </p>
+          </div>
           <p>
             <strong>Description: </strong>
             {album.description}

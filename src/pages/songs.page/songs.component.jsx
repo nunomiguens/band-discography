@@ -7,7 +7,7 @@ import SongsPreview from '../../components/songs-preview/songs-preview.component
 class SongsPage extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
       discography: ARTIST_DATA,
     };

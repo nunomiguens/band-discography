@@ -1,4 +1,6 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
 import MainPage from './pages/main.page/main.component';
@@ -7,8 +9,10 @@ import SongsPage from './pages/songs.page/songs.component';
 function App() {
   return (
     <div>
-      <MainPage />
-      <SongsPage />
+      <Switch>
+        <Route exact path='/' component={MainPage} />
+        <Route path='/songs-preview/:id' component={SongsPage} />
+      </Switch>
     </div>
   );
 }
